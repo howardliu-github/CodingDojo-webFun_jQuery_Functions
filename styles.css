@@ -1,0 +1,39 @@
+* {
+    width: 1000px;
+    padding: 10px;
+    margin: 0 auto;
+    outline: 2px dotted red;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+    text-align: center;
+}
+
+div {
+    background: #de9a44;
+    width: 1000px;
+    height: 40px;
+    display: none;
+    float: left;
+}
+
+section {
+    background: #de9a44;
+    width: 1000px;
+    height: 40px;
+    display: none;
+    float: left;
+}
+
+h5 {
+    background-color: green;
+}
+
+.selected {
+    background-color: red;
+}
+
+.blue {
+    background-color: blue;
+}

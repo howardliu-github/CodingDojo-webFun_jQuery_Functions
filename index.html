@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>jQuery Functions</title>
+    <link rel="stylesheet" href="styles.css">
+
+<!-- 
+.click
+.hide
+.show
+.toggle
+.slideDown
+.slideUp
+.slideToggle
+.fadeIn
+.fadeOut
+.addClass
+.before
+.after
+.append
+.html
+.attr
+.val
+.text 
+-->
+    
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('h1').click(function(){
+                $('button').hide();
+            })
+            $('h2').click(function(){
+                $('button').show();
+                $('#firstp').toggle();
+            })
+            $('h3').click(function(){
+                if ( $( "div" ).is( ":hidden" )){
+                    $('div').slideDown('slow');
+                } else{
+                    $('div').slideUp('slow');
+                }
+            })
+            $('h4').click(function(){
+                $('h4').slideToggle('slow');
+            })
+            $('h5').click(function(){
+                $('section').fadeIn('slow');
+            })
+            $('h6').click(function(){
+                $('section').fadeOut('slow');
+            })
+            $( "p" ).addClass( "selected" );
+            $("h6").before("<p>Test Before</p>");
+            $("h6").after("<p>Test After</p>");
+            $("h2").append("<p>Test Append</p>");
+            $("h1").html("test html laksjdlakdjlkas");
+            $("article").attr("class", "blue");
+            $("input" ).keyup(function() {
+                var value = $( this ).val();
+                $( "p" ).text( value );
+            })
+        });
+
+    </script>
+</head>
+
+
+<body>
+    <h1>Click</h1>
+    <button id="firstb">Click this button</button>
+    <h2>Click again</h2>
+    <p id="firstp">Here is a paragraph</p>
+    <p id="secondp">Here is another paragraph</p>
+    <button id="secondb">Click this other button</button>
+    <h3>This is an h3 to test slideDown and slideUp</h3>
+    <div></div>
+    <h4>SlideToggle h4</h4>
+    <h5>Fade Test</h5>
+    <section></section>
+    <h6>Fade Out test</h6>
+    <article class="attribute">testattribute</article>
+    <input type="text" value="some text">
+    <p></p>
+</body>
+</html>
